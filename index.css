@@ -1,3 +1,10 @@
+*{
+    box-sizing: border-box;
+    /* box-sizing: content-box; */
+    padding: 0;
+    margin: 0;
+}
+
 body{
     background-image: url(kepek/hatter.jpg);
     width: 100%;
@@ -5,15 +12,15 @@ body{
     max-width: 100vw;
     max-height: 100vh;
     margin: auto;
-    margin-top: 8px;
+    /* margin-top: 8px; */
     
 }
 .main{
     margin: auto;
-    width: 900px;
+    width: 100%;
     height: fit-content;
     background-color: #fff;
-    display: grid;
+    /* display: grid; */
     box-shadow: 10px 10px 10px 5px rgba(0, 0, 100, .15), -10px -10px 10px 5px rgba(0, 0, 100, .15);
 
 }
@@ -122,13 +129,9 @@ tr:nth-child(odd){
 
 }
 
-@media only screen and (max-width: 366px){
+@media screen and (max-width: 700px){
 
-    html{
-        height: fit-content;
-        padding-right: 0px;
-        margin-right: 0px;
-    }
+    
 
     .main{
         width: 100vw;
@@ -141,9 +144,16 @@ tr:nth-child(odd){
         height: 210px;
         padding-block: 3rem;
         background-color: #fff;
+    
+    }
+    body{
+        min-width: 300px;
     }
     .gomb{
         width: 50%;
+        margin: auto;
+        margin-block: 2px;
+        min-width: 200px;
         
     }
     .kepek{
@@ -159,11 +169,18 @@ tr:nth-child(odd){
     .versek{
         display: block;
         background-color: #fff;
+        min-width: 300px;
 
     }
 
     .footer{
         position: relative;
+    }
+    .x2{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        margin: auto;
     }
 
  
